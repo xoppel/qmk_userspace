@@ -1,4 +1,4 @@
 #pragma once
 
-#undef RGBLED_NUM
-#define RGBLED_NUM 22
+#undef RGBLIGHT_LED_COUNT
+#define RGBLIGHT_LED_COUNT 22

@@ -25,8 +25,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_FN1] = LAYOUT_all(
         KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,           KC_CALC,
-	KC_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,  _______, KC_CALC,
-	_______, KC_MPRV, KC_MPLY, KC_MNXT, RGB_TOG, BL_TOGG, _______, KC_PGUP, KC_HOME, KC_PGDN, KC_PSCR, KC_SLCK, KC_PAUS, KC_INS,  KC_VOLU,
+	QK_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,  _______, KC_CALC,
+	_______, KC_MPRV, KC_MPLY, KC_MNXT, UG_TOGG, BL_TOGG, _______, KC_PGUP, KC_HOME, KC_PGDN, KC_PSCR, KC_SCRL, KC_PAUS, KC_INS,  KC_VOLU,
 	_______, _______, KC_VOLD, KC_VOLU, KC_PGDN, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_INS,  _______, _______, _______, KC_VOLD,
 	_______, _______, KC_WBAK, KC_WFWD, _______, _______, KC_PGUP, KC_END,  KC_MUTE, KC_MPRV, KC_MPLY, _______, _______, KC_PGUP, KC_MUTE,
 	_______, _______, _______,                            KC_BSPC,                            MO(_FN2),_______, KC_MPRV, KC_PGDN, KC_MNXT
@@ -35,9 +35,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_FN2] = LAYOUT_all(
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-	_______, _______, _______, _______, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______, _______, _______, _______, _______, _______, RGB_MOD,
-	_______, _______, _______, _______, RGB_HUD, RGB_SAD, RGB_VAD, _______, _______, _______, _______, _______, _______, _______, _______,
-	_______, _______, BL_INC,  BL_DEC,  BL_TOGG, BL_BRTG, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-	RESET,   _______, _______,                            _______,                            _______, _______, _______, _______, _______
+	_______, _______, _______, _______, UG_HUEU, UG_SATU, UG_VALU, _______, _______, _______, _______, _______, _______, _______, UG_NEXT,
+	_______, _______, _______, _______, UG_HUED, UG_SATD, UG_VALD, _______, _______, _______, _______, _______, _______, _______, _______,
+	_______, _______, BL_UP,  BL_DOWN,  BL_TOGG, BL_BRTG, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+	QK_BOOT,   _______, _______,                            _______,                            _______, _______, _______, _______, _______
     )
 };
