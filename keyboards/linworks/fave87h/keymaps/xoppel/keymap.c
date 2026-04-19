@@ -24,7 +24,7 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT(
-        KC_ESC,           KC_F1,   KC_F2, KC_F3, KC_F4,  KC_F5, KC_F6, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,     KC_PSCR, KC_SLCK, KC_PAUS,
+        KC_ESC,           KC_F1,   KC_F2, KC_F3, KC_F4,  KC_F5, KC_F6, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,     KC_PSCR, KC_SCRL, KC_PAUS,
         KC_GRV,  KC_1,    KC_2,    KC_3,  KC_4,  KC_5,   KC_6,  KC_7,  KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC,    KC_INS,  KC_HOME, KC_PGUP,
         KC_TAB,  KC_Q,    KC_W,    KC_E,  KC_R,  KC_T,   KC_Y,  KC_U,  KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,    KC_DEL,  KC_END,  KC_PGDN,
         KC_LCTL, KC_A,    KC_S,    KC_D,  KC_F,  KC_G,   KC_H,  KC_J,  KC_K,    KC_L,    KC_SCLN, KC_QUOT, KC_DEL,  KC_ENT,        
@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT(
         KC_GRV,           _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,    _______, _______, KC_CALC,
         KC_ESC,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL,     _______, _______, KC_VOLU,
-        _______, KC_MPRV, KC_MPLY, KC_MNXT, RGB_TOG, BL_TOGG, _______, KC_PGUP, KC_HOME, KC_PGDN, KC_PSCR, KC_SLCK, KC_PAUS, KC_INS,     _______, KC_MUTE, KC_VOLD,
+        _______, KC_MPRV, KC_MPLY, KC_MNXT, RM_TOGG, BL_TOGG, _______, KC_PGUP, KC_HOME, KC_PGDN, KC_PSCR, KC_SCRL, KC_PAUS, KC_INS,     _______, KC_MUTE, KC_VOLD,
         _______, _______, KC_VOLD, KC_VOLU, KC_PGDN, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_INS,  _______, _______, _______,        
         _______, KC_WBAK, KC_WFWD, _______, _______, KC_PGUP, KC_END,  KC_MUTE, KC_MPRV, KC_MNXT, KC_MPLY,          _______,                      KC_PGUP,
         _______, _______, _______,                   KC_BSPC,                            _______, MO(2),            _______, _______,    KC_MPRV, KC_PGDN, KC_MNXT 
@@ -43,11 +43,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT(
         _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______,
-        _______, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, _______, _______, _______, _______,    _______, _______, _______,
+        _______, RM_TOGG, RM_NEXT, RM_HUEU, RM_HUED, RM_SATU, RM_SATD, RM_VALU, RM_VALD, _______, _______, _______, _______, _______,    _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,        
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,                      _______,
-        RESET,   _______, _______,                   _______,                            _______, _______,          _______, _______,    _______, _______, _______
+        QK_BOOT,   _______, _______,                   _______,                            _______, _______,          _______, _______,    _______, _______, _______
     ),
     [3] = LAYOUT(
         _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______,
@@ -59,9 +59,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 
-void rgb_matrix_indicators_user(void) {
+bool rgb_matrix_indicators_user(void) {
     led_t host_leds = host_keyboard_led_state();
     if (host_leds.caps_lock) {
-        rgb_matrix_set_color(12, 254, 189, 41); // set caps lock led color first number is index, R G B
+        rgb_matrix_set_color(12, 254, 189, 41);
     }
+    return false;
 }
