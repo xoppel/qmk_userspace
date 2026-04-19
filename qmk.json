@@ -1,6 +1,29 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["acheron/apollo/87hltarc2", "xoppel"]
+        ["acheron/apollo/87hltarc2", "xoppel"],
+        ["cannonkeys/instant60", "xoppel"],
+        ["cannonkeys/obliterated75", "xoppel"],
+        ["clueboard/66/rev4", "xoppel"],
+        ["doro67/multi", "xoppel"],
+        ["fc660c", "xoppel"],
+        ["geonworks/glare_65", "xoppel"],
+        ["geonworks/glare_65_hs", "xoppel"],
+        ["gray_studio/cod67", "xoppel"],
+        ["ilumkb/primus75", "xoppel"],
+        ["kbdfans/kbd67/mkiirgb/v2", "xoppel"],
+        ["linworks/fave84h", "xoppel"],
+        ["linworks/fave87", "xoppel"],
+        ["linworks/fave87h", "xoppel"],
+        ["mechlovin/hex4b/rev2", "xoppel"],
+        ["noxary/268_2_rgb", "xoppel"],
+        ["smithrune/iron165r2/f411", "xoppel"],
+        ["spaceholdings/nebula68", "xoppel"],
+        ["wilba_tech/rama_works_m6_b", "xoppel"],
+        ["wilba_tech/rama_works_u80_a", "xoppel"],
+        ["wilba_tech/wt60_h2", "xoppel"],
+        ["wilba_tech/zeal60", "xoppel"],
+        ["wilba_tech/zeal65", "xoppel"],
+        ["zeix/singa/kohaku", "xoppel"]
     ]
 }
