@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LAYER1] = LAYOUT_tkl_ansi_tsangan(
         KC_GRV,           _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,            _______, _______, KC_CALC,
         KC_ESC,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL,             _______, _______, KC_VOLU,
-        _______, KC_MPRV, KC_MPLY, KC_MNXT, RGB_TOG, _______, _______, KC_PGUP, KC_HOME, KC_PGDN, KC_PSCR, KC_SCRL, KC_PAUS, KC_INS,             _______, KC_MUTE, KC_VOLD,
+        _______, KC_MPRV, KC_MPLY, KC_MNXT, RM_TOGG, _______, _______, KC_PGUP, KC_HOME, KC_PGDN, KC_PSCR, KC_SCRL, KC_PAUS, KC_INS,             _______, KC_MUTE, KC_VOLD,
         _______, _______, KC_VOLD, KC_VOLU, KC_PGDN, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_INS,  _______,          _______,
         _______, KC_WBAK, KC_WFWD, _______, _______, KC_PGUP, KC_END,  KC_MUTE, KC_MPRV, KC_MNXT, KC_MPLY,          _______,                              KC_PGUP,
         _______, _______, _______,                   KC_BSPC,                                     _______,          MO(2),   _______,            KC_MPRV, KC_PGDN, KC_MNXT
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_LAYER2] = LAYOUT_tkl_ansi_tsangan(
         _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,            _______, _______, _______,
-        _______, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, _______, _______, _______, _______,            _______, _______, _______,
+        _______, RM_TOGG, RM_NEXT, RM_HUEU, RM_HUED, RM_SATU, RM_SATD, RM_VALU, RM_VALD, _______, _______, _______, _______, _______,            _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,            _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,                              _______,
