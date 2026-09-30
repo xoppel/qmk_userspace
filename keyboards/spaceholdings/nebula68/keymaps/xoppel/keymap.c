@@ -15,6 +15,8 @@
  */
 #include QMK_KEYBOARD_H
 
+// Helpful defines
+#define _______ KC_TRNS
 #define xxxxxxx KC_NO
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -30,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, KC_MPRV, KC_MPLY, KC_MNXT, UG_TOGG, BL_TOGG, _______, KC_PGUP, KC_HOME, KC_PGDN, KC_PSCR, KC_SCRL, KC_PAUS, KC_INS,  KC_MUTE,  KC_VOLD,
     _______, _______, _______, KC_VOLD, KC_VOLU, KC_PGDN, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_INS,           _______,
     MO(2),   KC_WBAK, KC_WFWD, _______, _______, KC_PGUP, KC_END,  KC_MUTE, KC_MPRV, KC_MPLY, _______, _______,                   KC_PGUP,
-    _______, _______, _______,                KC_BSPC,                               _______, MO(2),   _______,          KC_MPRV, KC_PGDN, KC_MNXT),
+    _______, _______, _______,                KC_BSPC,                               KC_LEFT, KC_DOWN, _______,          KC_MPRV, KC_PGDN, KC_MNXT),
 
 [2] = LAYOUT_68_ansi( /* FN2 */
     _______, ES_INC,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_CALC,
