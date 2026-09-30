@@ -14,6 +14,9 @@ QMK External Userspace for the `xoppel` keymaps. See `README.md` for the board l
 
 - Path: `keyboards/<vendor>/<board>/keymaps/xoppel/` with `keymap.c`, `rules.mk`, and `config.h` only when needed.
 - All boards use the same `xoppel` keymap name and share one layer design.
+- Layer 0 bottom row starts with `MO(1)`, `KC_LGUI`, `KC_LALT` and ends with an Fn key or `KC_RALT`.
+- Layer 1 binds `Fn + H/J/K/L` to Left, Down, Up, Right. `KC_INS` is on the row above, next to `KC_PAUS`. It is not at `Fn + ;`, because it fires by accident.
+- Keep a way to reach `QK_BOOT` on every board. Do not put it on the key that you hold to reach the layer.
 - Use current QMK APIs. Older keymaps were modernized one commit per board.
 - Board definitions in `keyboards/` outside `keymaps/` exist only for boards missing from upstream.
 
@@ -39,7 +42,7 @@ qmk userspace-add -kb <target> -km xoppel
 - Rebuild every affected target after a change to shared or board files.
 - Update `qmk.json` and the `README.md` table when a board is added or removed.
 - Do not commit `*.hex`, `*.bin`, or `*.uf2`.
-- Commit one board per commit. Use the message style `Modernize <Board> xoppel keymap`.
+- Commit one board per commit. Use the message style `Unify <Board> xoppel keymap`.
 - Do not push unless asked.
 
 ## Apollo 87HLT-ARC2

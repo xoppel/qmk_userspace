@@ -1,5 +1,5 @@
 {
-    "userspace_version": "1.0",
+    "userspace_version": "1.1",
     "build_targets": [
         ["acheron/apollo/87hltarc2", "xoppel"],
         ["cannonkeys/instant60", "xoppel"],
@@ -24,6 +24,11 @@
         ["wilba_tech/wt60_h2", "xoppel"],
         ["wilba_tech/zeal60", "xoppel"],
         ["wilba_tech/zeal65", "xoppel"],
-        ["zeix/singa/kohaku", "xoppel"]
+        ["zeix/singa/kohaku", "xoppel"],
+        ["dz60", "xoppel"],
+        ["yandrstudio/transition_lite", "xoppel"],
+        ["cannonkeys/vector", "xoppel"],
+        ["qwertykeys/neo80cu", "xoppel"],
+        ["wilba_tech/wt65_cx", "xoppel"]
     ]
 }
