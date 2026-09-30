@@ -1,5 +1,9 @@
 #include QMK_KEYBOARD_H
 
+// Helpful defines
+#define _______ KC_TRNS
+#define xxxxxxx KC_NO
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		[0] = LAYOUT_65_ansi_blocker( 
 			QK_GESC, KC_1,     KC_2,     KC_3,  KC_4,  KC_5,  KC_6,    KC_7,  KC_8,    KC_9,     KC_0,     KC_MINS,  KC_EQL,  KC_BSPC,   KC_HOME,\
@@ -11,19 +15,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			KC_GRV,  KC_F1,    KC_F2,   KC_F3,  KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12,  KC_DEL,   KC_CALC,\
 			_______, KC_MPRV,  KC_MPLY, KC_MNXT,RM_TOGG, BL_TOGG, _______, KC_PGUP, KC_HOME, KC_PGDN, KC_PSCR,  KC_SCRL, KC_PAUS, _______,  KC_VOLU,\
 			_______, _______,  KC_VOLD, KC_VOLU,KC_PGDN, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_INS,   _______,          _______,  KC_VOLD,\
-			KC_LSFT, KC_WBAK,  KC_WFWD, _______,_______, KC_PGUP, KC_END,  KC_MUTE, KC_MPRV, KC_MNXT, KC_MPLY,  _______,          KC_PGUP,  KC_MUTE,\
-			_______, _______,  _______,                  KC_BSPC,                   MO(2),            _______,  KC_MPRV,          KC_PGDN,  KC_MNXT),
+			MO(2),   KC_WBAK,  KC_WFWD, _______,_______, KC_PGUP, KC_END,  KC_MUTE, KC_MPRV, KC_MNXT, KC_MPLY,  _______,          KC_PGUP,  KC_MUTE,\
+			_______, _______,  _______,                  KC_BSPC,                   KC_LEFT,          _______,  KC_MPRV,          KC_PGDN,  KC_MNXT),
 		[2] = LAYOUT_65_ansi_blocker( 
 			_______,  _______,  _______, _______,  _______,  _______, _______, _______, _______, _______, _______, _______, _______, KC_NUM,  _______,\
 			_______,  RM_TOGG,  RM_NEXT, RM_HUEU,  RM_HUED,  RM_SATU, RM_SATD, RM_VALU, RM_VALD, _______, _______, _______, _______, QK_BOOT,    _______,\
 			_______,  RM_SPDU,  RM_SPDD, _______,  _______,  _______, _______, _______, _______, _______, _______, _______,          _______,  _______,\
 			_______,  _______,  _______, _______,  _______,  _______, _______, _______, _______, _______, _______, _______,          _______,  _______,\
 			QK_BOOT,    _______,  _______,                     _______,                   _______,          _______, _______,          _______,  _______),
-		[3] = LAYOUT_65_ansi_blocker( 
-			_______,  _______,  _______, _______,  _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,\
-			_______,  _______,  _______, _______,  _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,\
-			_______,  _______,  _______, _______,  _______,  _______, _______, _______, _______, _______, _______, _______,          _______,  _______,\
-			_______,  _______,  _______, _______,  _______,  _______, _______, _______, _______, _______, _______, _______,          _______,  _______,\
-			_______,  _______,  _______,                     _______,                   _______,          _______, _______,          _______,  _______),
 };
 
