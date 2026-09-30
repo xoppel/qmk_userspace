@@ -16,6 +16,10 @@
 // Default layout for WT60-H2
 #include QMK_KEYBOARD_H
 
+// Helpful defines
+#define _______ KC_TRNS
+#define xxxxxxx KC_NO
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	// Default layer
@@ -31,8 +35,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,
 		_______, KC_MPRV, KC_MPLY, KC_MNXT, _______, _______, _______, KC_PGUP, KC_HOME, KC_PGDN, KC_PSCR, KC_SCRL, KC_PAUS, KC_INS,
 		_______, _______, KC_VOLD, KC_VOLU, KC_PGDN, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_INS,  KC_DEL,  _______,
-		MO(2),   KC_WBAK, KC_WFWD, _______, _______, KC_PGUP, KC_END,  KC_MUTE, KC_MPRV, KC_MNXT, KC_MPLY, KC_UP,   _______,
-		_______, _______, _______,                            KC_BSPC,                            KC_LEFT, KC_DOWN, KC_RGHT),
+		MO(2),   KC_WBAK, KC_WFWD, _______, _______, KC_PGUP, KC_END,  KC_MUTE, KC_MPRV, KC_MNXT, KC_MPLY, _______, _______,
+		_______, _______, _______,                            KC_BSPC,                            KC_LEFT, KC_DOWN, _______),
 
 	// Fn2 Layer
 	[2] = LAYOUT_all(
